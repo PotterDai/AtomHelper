@@ -12,8 +12,8 @@ defmodule AtomHelper do
   def str_to_atom(map) when is_map(map), do: for {key, val} <- map, into: %{}, do: {String.to_atom(key), val}
   def str_to_atom(arr) when is_list(arr), do: for val <- arr, into: [], do: String.to_atom(val)
 
-  @spec str_to_atom!(binary | map | list) :: atom
-  def str_to_atom!(str) when is_binary(str), do: String.to_existing_atom(str)
-  def str_to_atom!(map) when is_map(map), do: for {key, val} <- map, into: %{}, do: {String.to_existing_atom(key), val}
-  def str_to_atom!(arr) when is_list(arr), do: for val <- arr, into: [], do: String.to_existing_atom(val)
+  @spec str_to_existing_atom(binary | map | list) :: atom
+  def str_to_existing_atom(str) when is_binary(str), do: String.to_existing_atom(str)
+  def str_to_existing_atom(map) when is_map(map), do: for {key, val} <- map, into: %{}, do: {String.to_existing_atom(key), val}
+  def str_to_existing_atom(arr) when is_list(arr), do: for val <- arr, into: [], do: String.to_existing_atom(val)
 end
