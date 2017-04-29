@@ -5,11 +5,11 @@
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `atom_helper` to your list of dependencies in `mix.exs`:
+by adding `atomhelper` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:atom_helper, "~> 0.1.0"}]
+  [{:atomhelper, "~> 0.1.0"}]
 end
 ```
 
